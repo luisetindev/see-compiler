@@ -39,6 +39,7 @@ class Lexer{
         char advance();
         void consumeToken();
         void consumeAll();
+        void visualizeTokens();
         
         
 

@@ -34,5 +34,7 @@ int main(){
 
     Lexer lexer(content);
     lexer.consumeAll();
+    lexer.visualizeTokens();
+
     return 0;
 }

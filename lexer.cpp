@@ -13,6 +13,9 @@ void Lexer::consumeAll(){
     while(this->_currentIdx < (int) this->content.length()-1){
         this->consumeToken();
     }
+}
+
+void Lexer::visualizeTokens(){
     for(Token t : this->tokens){
         std::cout << t.value << std::endl;
     }
@@ -23,6 +26,8 @@ void Lexer::consumeToken(){
     char current = this->advance();
 
     Token t;
+
+    // TODO: Read identifiers, rest of the tokens
 
     if(current == '('){
         t.type = TokenType::LPARENT;
@@ -35,6 +40,5 @@ void Lexer::consumeToken(){
         this->tokens.push_back(t);
     }
 
-    // std::cout << this->advance() << std::endl;
 }
 
